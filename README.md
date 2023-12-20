@@ -34,18 +34,6 @@ This Cucumber Selenium project is created with a simple and scalable framework a
 # Example installation and execution steps
 git clone https://github.com/Apzal/jdoodletest
 cd your-repo
-# Ensure Maven is installed
-mvn clean test
-
-
-## Execution
-
-### To execute in command prompt
-
-```bash
-# Example installation and execution steps
-git clone https://github.com/Apzal/jdoodletest
-cd your-repo
 # Ensure maven is installed
 mvn clean test
 ```
