@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: JDoodle CI with Maven
 
 on:
   push:
@@ -15,8 +15,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-
+  execute-test:
     runs-on: ubuntu-latest
 
     steps:
