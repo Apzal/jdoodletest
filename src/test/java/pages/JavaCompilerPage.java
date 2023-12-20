@@ -30,7 +30,7 @@ public class JavaCompilerPage extends BasePage {
     private final By txtAreaEditor = By.className("ace_text-input");
     private final By divCodeEditor = By.xpath("//div[@class='ace_content']");
     private final By btnStopExecuting = By.xpath("//button[contains(text(),'Stop Executing')]");
-    private final By btnCaptchaVerify = By.xpath("//button[text()='Verify']");
+    private final By captchaPopUp = By.id("recaptcha-token");
     private final By captchaIFrame = By.xpath("//iframe[contains(@title,'recaptcha')]");
 
     public JavaCompilerPage(DriverContext driverContext) {
@@ -131,7 +131,7 @@ public class JavaCompilerPage extends BasePage {
 
     public void verifyCaptchaDisplayed() {
         switchToIFrame(captchaIFrame);
-        Assert.assertTrue(isElementDisplayed(btnCaptchaVerify), "Captcha not prompted");
+        Assert.assertFalse(waitForElements(captchaPopUp, 20).isEmpty(), "Captcha not prompted");
         switchToDefaultContent();
         logger.info("Validated Captcha popup display");
     }

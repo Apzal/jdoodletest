@@ -40,6 +40,7 @@ public class BasePage extends PageInstance {
             WebDriverManager.chromedriver().setup();
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--start-maximized");
+            chromeOptions.addArguments("--headless");
             this.driverContext.driver = new ChromeDriver(chromeOptions);
             logger.info("Launched browser:" + browser);
         }
